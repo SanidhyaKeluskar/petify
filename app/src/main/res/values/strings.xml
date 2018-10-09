@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FindACat</string>
+    <string name="Tittle">Find A Cat</string>
+    <string name="Button_FindCat">Find Cat</string>
+    <string name="Button_FavCat">Fav Cat</string>
+    <string name="Cat_details_name">Name</string>
+    <string name="Cat_details_nameofCat">Max</string>
+</resources>
