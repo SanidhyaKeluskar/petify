@@ -45,9 +45,14 @@ class CatView : AppCompatActivity() {
 
               override fun onResponse(call: Call<ResponseTwo>, response: Response<ResponseTwo>) {
                  Log.d("hii","succesfull")
-                  var news = response.body().toString()
+                  val news = response.body().toString()
 
-                  println(news)
+                //  var state= news?.petfinder?.xmlnsXsi.toString()
+                  Log.d("hii",news)
+
+
+
+
               }
 
           })
