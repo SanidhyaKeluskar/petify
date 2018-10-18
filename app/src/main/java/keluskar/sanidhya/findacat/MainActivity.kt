@@ -35,10 +35,6 @@ class MainActivity : AppCompatActivity() {
         goFindaCatView.setOnClickListener {
             val intent: Intent=Intent(applicationContext,CatView::class.java)
             startActivity(intent)
-
-
-
-
         }
 
         runOnUiThread {

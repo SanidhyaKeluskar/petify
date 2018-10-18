@@ -19,16 +19,13 @@ import java.util.*
 import javax.xml.transform.Templates
 
 class CatView : AppCompatActivity() {
-    val animals: ArrayList<Int> = ArrayList()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.catlist)
 
-        animals.add(R.drawable.ic_launcher_background)
-        animals.add(R.drawable.ic_launcher_foreground)
-        animals.add(R.drawable.ic_launcher_background)
         catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
       //  catlistrecycleview.adapter=CatAdapter()
 
