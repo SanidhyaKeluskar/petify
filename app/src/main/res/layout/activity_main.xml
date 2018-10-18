@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/cat_image"
+    android:background="@android:color/background_light"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
@@ -24,6 +24,7 @@
         android:layout_marginTop="51dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/Tittle"
+        android:textColor="@android:color/background_dark"
         android:textSize="30sp" />
 
     <Button

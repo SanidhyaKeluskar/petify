@@ -6,12 +6,12 @@ import com.squareup.moshi.Json
 
 data class ResponseTwo(
 
-	@Json(name="petfinder")
+	@field:Json(name="petfinder")
 	val petfinder: Petfinder? = null,
 
-	@Json(name="@version")
+	@field:Json(name="@version")
 	val version: String? = null,
 
-	@Json(name="@encoding")
+	@field:Json(name="@encoding")
 	val encoding: String? = null
 )

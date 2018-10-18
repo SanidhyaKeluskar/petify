@@ -5,7 +5,6 @@ import com.squareup.moshi.Json
 
 
 data class Pets(
-
-	@Json(name="pet")
+		@field:Json(name="pet")
 	val pet: List<PetItem?>? = null
 )

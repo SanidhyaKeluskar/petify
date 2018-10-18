@@ -6,6 +6,6 @@ import com.squareup.moshi.Json
 
 data class State(
 
-	@Json(name="\$t")
+	@field:Json(name="\$t")
 	val T: String? = null
 )

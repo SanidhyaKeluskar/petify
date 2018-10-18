@@ -6,12 +6,12 @@ import com.squareup.moshi.Json
 
 data class Header(
 
-	@Json(name="version")
+	@field:Json(name="version")
 	val version: Version? = null,
 
-	@Json(name="timestamp")
+	@field:Json(name="timestamp")
 	val timestamp: Timestamp? = null,
 
-	@Json(name="status")
+	@field:Json(name="status")
 	val status: Status? = null
 )

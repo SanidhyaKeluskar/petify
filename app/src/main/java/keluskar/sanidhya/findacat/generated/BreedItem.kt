@@ -5,6 +5,6 @@ import com.squareup.moshi.Json
 
 data class BreedItem(
 
-	@Json(name="\$t")
+	@field:Json(name="\$t")
 	val T: String? = null
 )

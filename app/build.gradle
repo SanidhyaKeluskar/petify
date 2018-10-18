@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.6.2'
     implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.6.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'org.jetbrains.anko:anko-commons:0.10.6'
     implementation 'com.squareup.moshi:moshi-adapters:1.6.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

@@ -9,6 +9,7 @@ import android.view.View
 import keluskar.sanidhya.findacat.generated.ResponseTwo
 import kotlinx.android.synthetic.main.catlist.*
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,7 +30,7 @@ class CatView : AppCompatActivity() {
         animals.add(R.drawable.ic_launcher_foreground)
         animals.add(R.drawable.ic_launcher_background)
         catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
-        catlistrecycleview.adapter=CatAdapter()
+      //  catlistrecycleview.adapter=CatAdapter()
 
         doAsync {
             val retrofit = Retrofit.Builder()
@@ -37,7 +38,7 @@ class CatView : AppCompatActivity() {
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
             val apiEndpoint = retrofit.create(ApiFindCat::class.java)
-          apiEndpoint.getAllsecondPost("bc6a0292370a67e30750be05b5384e0a","cat","20037","json").enqueue(object: Callback<ResponseTwo>{
+          apiEndpoint.getAllsecondPost("bc6a0292370a67e30750be05b5384e0a","cat","19019","json").enqueue(object: Callback<ResponseTwo>{
               override fun onFailure(call: Call<ResponseTwo>, t: Throwable) {
                   Log.d("hii","Wrong")
                   Log.d("hii",t.toString())
@@ -45,10 +46,15 @@ class CatView : AppCompatActivity() {
 
               override fun onResponse(call: Call<ResponseTwo>, response: Response<ResponseTwo>) {
                  Log.d("hii","succesfull")
-                  val news = response.body().toString()
+                  val responseBody = response.body()
+                  runOnUiThread {
+                      catlistrecycleview.adapter=CatAdapter(responseBody!!)
+                  }
+                  val pets = responseBody?.petfinder?.pets
+                  Log.d("hii", responseBody.toString())
+
 
                 //  var state= news?.petfinder?.xmlnsXsi.toString()
-                  Log.d("hii",news)
 
 
 

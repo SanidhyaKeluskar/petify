@@ -7,12 +7,22 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="124dp"
-        android:layout_height="146dp"
+        android:layout_width="207dp"
+        android:layout_height="139dp"
         android:layout_weight="1"
         android:gravity="center_horizontal|center"
         app:srcCompat="@mipmap/ic_launcher" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="#80141414"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
 
 </FrameLayout>

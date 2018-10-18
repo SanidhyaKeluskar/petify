@@ -6,9 +6,9 @@ import com.squareup.moshi.Json
 
 data class Response(
 
-	@Json(name="fact")
+	@field:Json(name="fact")
 	val fact: String? = null,
 
-	@Json(name="length")
+	@field:Json(name="length")
 	val length: Int? = null
 )

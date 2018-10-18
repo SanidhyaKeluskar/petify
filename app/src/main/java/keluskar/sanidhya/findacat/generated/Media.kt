@@ -6,6 +6,6 @@ import com.squareup.moshi.Json
 
 data class Media(
 
-	@Json(name="photos")
+	@field:Json(name="photos")
 	val photos: Photos? = null
 )
