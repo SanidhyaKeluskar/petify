@@ -11,10 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        android:theme="@style/Theme.AppCompat.Light">
         <activity android:name=".MainActivity"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +28,12 @@
                        android:value=".MainActivity">
             </meta-data>
         </activity>
-        <activity android:name=".CatDetailActivity"></activity>
+        <activity android:name=".CatDetailActivity"
+            android:label="Cat Details"
+            android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CatView">
+            </meta-data></activity>
     </application>
 
 </manifest>
