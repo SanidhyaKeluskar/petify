@@ -21,7 +21,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 class MainActivity : AppCompatActivity() {
     lateinit var goFindaCatView: Button
-
+    lateinit var goFavoriteCatView: Button
 
 
 
@@ -30,10 +30,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         goFindaCatView=findViewById(R.id.button2)
-
+        goFavoriteCatView=findViewById(R.id.button3)
 
         goFindaCatView.setOnClickListener {
             val intent: Intent=Intent(applicationContext,CatView::class.java)
+            startActivity(intent)
+        }
+        goFavoriteCatView.setOnClickListener {
+            val intent: Intent=Intent(applicationContext,FavoriteCatActivity::class.java)
             startActivity(intent)
         }
 
