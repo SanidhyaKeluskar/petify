@@ -43,7 +43,6 @@ class PersistenceManager (private val context: Context){
     fun fetchFavorites(): List<Favorites> {
         val jsonString = sharedPreferences.getString("FAVORITES", null)
 
-        //if null, this means no previous scores, so create an empty array list
         if(jsonString == null) {
             return arrayListOf<Favorites>() as List<Favorites>
         }

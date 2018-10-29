@@ -4,21 +4,21 @@
 
     <item
         android:id="@+id/favoritesbutton"
-        android:title="Favorite"
+        android:title="@string/cat_details_fav_button"
         app:showAsAction="always">
 
     </item>
     <item
         android:id="@+id/email_button"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="email"
+        android:title="@string/cat_details_email_button"
         app:showAsAction="always"></item>
 
     <item
         android:id="@+id/share_button"
         android:icon="@android:drawable/ic_menu_share"
         android:onClick="shareButtonPressed"
-        android:title="share"
+        android:title="@string/cat_details_share_button"
         app:showAsAction="always"></item>
 
 </menu>

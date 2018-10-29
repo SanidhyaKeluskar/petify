@@ -26,7 +26,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 class MainActivity : AppCompatActivity() {
     lateinit var goFindaCatView: Button
     lateinit var goFavoriteCatView: Button
-    private val LocationPermissionRequestCode=7
+    private val LocationPermissionRequestCode=77
     private lateinit var locationDetector: LocationDetector
 
 
@@ -49,10 +49,6 @@ class MainActivity : AppCompatActivity() {
         requestPermissionIfNecessary()
         locationDetector = LocationDetector(this)
         locationDetector.detectLocation()
-      //  Log.d("hii",locationDetector.myLogitude)
-     //   Log.d("hii",locationDetector.mylatitude)
-
-
 
 
         doAsync {

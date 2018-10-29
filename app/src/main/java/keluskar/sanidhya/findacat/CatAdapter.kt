@@ -30,7 +30,7 @@ class CatAdapter(val responseBody: ResponseTwo) : RecyclerView.Adapter<CustomVie
 
 
     override fun getItemCount(): Int {
-         return 24
+         return responseBody.petfinder?.pets?.pet?.size!!
     }
 
 

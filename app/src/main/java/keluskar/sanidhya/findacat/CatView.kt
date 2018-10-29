@@ -32,9 +32,6 @@ class CatView : AppCompatActivity() {
         setContentView(R.layout.catlist)
 
 
-
-
-      //  catlistrecycleview.adapter=CatAdapter()
         if(LocationDetector.postalCode==""){
             toast("Location not avaialable. Please enter zip code")
         }
@@ -53,21 +50,16 @@ class CatView : AppCompatActivity() {
             val apiEndpoint = retrofit.create(ApiFindCat::class.java)
             apiEndpoint.getAllsecondPost("bc6a0292370a67e30750be05b5384e0a", "cat", zipCode, "json").enqueue(object : Callback<ResponseTwo> {
                 override fun onFailure(call: Call<ResponseTwo>, t: Throwable) {
-                    Log.d("hii", "Wrong")
-                    Log.d("hii", t.toString())
+                 toast("Error in Network call please try later")
                 }
 
                 override fun onResponse(call: Call<ResponseTwo>, response: Response<ResponseTwo>) {
-                    Log.d("hii", "succesfull")
+
                     val responseBody = response.body()
                     runOnUiThread {
                         catlistrecycleview.adapter = CatAdapter(responseBody!!)
                     }
                     val pets = responseBody?.petfinder?.pets
-                    Log.d("hii", responseBody.toString())
-
-
-                    //  var state= news?.petfinder?.xmlnsXsi.toString()
 
 
                 }
@@ -90,7 +82,7 @@ class CatView : AppCompatActivity() {
         val mDialogView=LayoutInflater.from(this).inflate(R.layout.zip_dialog,null)
         val mBuilder=AlertDialog.Builder(this )
                 .setView(mDialogView)
-                .setTitle("Zip code ")
+                .setTitle("Zip Code")
         val mAlertDialog=mBuilder.show()
 
         mDialogView.dialogsubmit.setOnClickListener{

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">एक बिल्ली खोजें</string>
+    <string name="Tittle">एक बिल्ली खोजें</string>
+    <string name="Button_FindCat">बिल्ली पाएं</string>
+    <string name="Button_FavCat">पसंदीदा बिल्ली</string>
+    <string name="home_cat_image_description">होम स्क्रीन बिल्ली छवि</string>
+    <string name="cat_details_name">नाम</string>
+    <string name="cat_details_actual_name">Max</string>
+    <string name="Ccat_details_gender">लिंग</string>
+    <string name="Ccat_details_actual_gender">M</string>
+    <string name="cat_details_zipcode">पिन कोड</string>
+    <string name="cat_details_actual_zipcode">20037</string>
+    <string name="cat_details">बिल्ली विवरण</string>
+    <string name="cat_actual_details">विवरण</string>
+    <string name="cat_details_image_description">चयनित बिल्ली की छवि</string>
+    <string name="cat_list_name">सूची नाम अधिकतम</string>
+    <string name="cat_list_zip_code_button">पिन कोड</string>
+    <string name="cat_list_image_desc">सूची दृश्य में बिल्ली की छवि</string>
+    <string name="fav_name">Max</string>
+    <string name="fav_image">पसंदीदा बिल्ली की छवि का चयन किया</string>
+    <string name="zip_code_submit">जमा करें</string>
+    <string name="zip_code_cancel">रद्द करना</string>
+    <string name="zip_code_desc">ज़िप कोड डालें</string>
+    <string name="cat_details_fav_button">पसंदीदा</string>
+    <string name="cat_details_email_button">ईमेल</string>
+    <string name="cat_details_share_button">शेयर</string>
+    <string name="cat_details_tittle">बिल्ली विवरण</string>
+    <string name="cat_list_tittle">बिल्ली पास</string>
+    <string name="fav_list_tittle">पसंदीदा बिल्लीt</string>
+</resources>

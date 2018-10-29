@@ -16,6 +16,7 @@
             android:layout_width="456dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="@string/cat_details_image_description"
             app:srcCompat="@mipmap/ic_launcher" />
 
         <LinearLayout
@@ -30,7 +31,7 @@
                 android:layout_height="38dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/Cat_details_name"
+                android:text="@string/cat_details_name"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -38,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Gender:"
+                android:text="@string/Ccat_details_gender"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -46,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Zip:"
+                android:text="@string/cat_details_zipcode"
                 android:textColor="@android:color/black" />
         </LinearLayout>
 
@@ -62,7 +63,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="TextView"
+                android:text="@string/cat_details_actual_name"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -70,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_weight="1"
-                android:text="@string/Cat_details_nameofCat"
+                android:text="@string/Ccat_details_actual_gender"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -78,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="@string/cat_details_actual_zipcode"
                 android:textColor="@android:color/black" />
         </LinearLayout>
 
@@ -89,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:gravity="bottom"
-        android:text="Cat Details:"
+        android:text="@string/cat_details"
         android:textColor="@android:color/black" />
 
     <ScrollView
@@ -102,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Details"
+            android:text="@string/cat_actual_details"
             android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="14sp" />

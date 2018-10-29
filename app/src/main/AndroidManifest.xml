@@ -3,8 +3,6 @@
     package="keluskar.sanidhya.findacat">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -23,20 +21,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".CatView"
-            android:label="Cats Nearby"
+            android:label="@string/cat_list_tittle"
             android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                        android:value=".MainActivity">
             </meta-data>
         </activity>
         <activity android:name=".CatDetailActivity"
-            android:label="Cat Details"
+            android:label="@string/cat_details_tittle"
             android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CatView">
             </meta-data></activity>
         <activity android:name=".FavoriteCatActivity"
-            android:label="Favorite Cats"
+            android:label="@string/fav_list_tittle"
             android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity">
