@@ -35,8 +35,8 @@ class CatView : AppCompatActivity() {
 
         catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
       //  catlistrecycleview.adapter=CatAdapter()
+       // doNetworkActivity(LocationDetector.postalCode)
         doNetworkActivity("20037")
-
     }
 
     private fun doNetworkActivity(zipCode: String) {

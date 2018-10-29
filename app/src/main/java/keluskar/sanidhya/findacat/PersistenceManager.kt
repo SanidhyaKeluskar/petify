@@ -24,12 +24,12 @@ class PersistenceManager (private val context: Context){
         val favorites= fetchFavorites().toMutableList()
         val element=Favorites(favImage,favName)
         if(favorites.contains(element)){
-            Toast.makeText(context,"Unf avorite",Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"Deleted from Favorites",Toast.LENGTH_LONG).show()
             favorites.remove(element)
         }
         else{
         favorites.add(element)
-        Toast.makeText(context,"favorite",Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"Added to Favorites",Toast.LENGTH_LONG).show()
         }
         val editor = sharedPreferences.edit()
 

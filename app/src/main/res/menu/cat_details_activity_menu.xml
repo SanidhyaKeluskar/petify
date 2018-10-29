@@ -8,4 +8,17 @@
         app:showAsAction="always">
 
     </item>
+    <item
+        android:id="@+id/email_button"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="email"
+        app:showAsAction="always"></item>
+
+    <item
+        android:id="@+id/share_button"
+        android:icon="@android:drawable/ic_menu_share"
+        android:onClick="shareButtonPressed"
+        android:title="share"
+        app:showAsAction="always"></item>
+
 </menu>
