@@ -1,5 +1,6 @@
 package keluskar.sanidhya.findacat
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -20,14 +21,26 @@ class FavoriteAdapter(val favorite:List<Favorites>) : RecyclerView.Adapter<Custo
         return favorite.size
          }
 
-    override fun onBindViewHolder(holder: CustomSecondViewHolder, p1: Int) {
-        holder.view.textView7.text= favorite[p1].favName
+    override fun onBindViewHolder(holder: CustomSecondViewHolder, position: Int) {
+        holder.view.textView7.text= favorite[position].favName
         val favoriteImageHolder=holder.view.imageView4
-        val photoOfFavorite=favorite[p1].favImage
+        val photoOfFavorite=favorite[position].favImage
         Picasso.get().load(photoOfFavorite).into(favoriteImageHolder)
+        holder?.favouriteDetails=favorite
     }
 
 }
-class CustomSecondViewHolder(val view : View): RecyclerView.ViewHolder(view){
-
+class CustomSecondViewHolder(val view : View, var favouriteDetails: List<Favorites>?=null): RecyclerView.ViewHolder(view){
+    init {
+        view.setOnClickListener {
+            val intent = Intent(view.context,CatDetailActivity::class.java)
+            intent.putExtra("nameofcat",favouriteDetails!![position]?.favName)
+            intent.putExtra("genderofcat",favouriteDetails!![position]?.favGender)
+            intent.putExtra("descriptionofcat",favouriteDetails!![position]?.favDesc)
+            intent.putExtra("imageofcat",favouriteDetails!![position]?.favImage)
+            intent.putExtra("locationofcat",favouriteDetails!![position]?.favLocation)
+            intent.putExtra("emailOfCat", favouriteDetails!![position]?.favEmail)
+            view.context.startActivity(intent)
+        }
+    }
 }

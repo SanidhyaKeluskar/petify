@@ -1,6 +1,5 @@
 package keluskar.sanidhya.findacat
 
-import android.content.ContentValues
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
@@ -8,10 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import keluskar.sanidhya.findacat.generated.Favorites
 import java.io.IOException
-import java.util.*
 
 class PersistenceManager (private val context: Context){
     private val sharedPreferences: SharedPreferences
@@ -20,9 +17,9 @@ class PersistenceManager (private val context: Context){
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
     }
 
-    fun saveFavorites( favImage: String, favName: String){
+    fun saveFavorites( favImage: String, favName: String, favLocation: String,favGender: String, favDesc: String, favEmail: String){
         val favorites= fetchFavorites().toMutableList()
-        val element=Favorites(favImage,favName)
+        val element=Favorites(favImage,favName, favLocation, favGender, favDesc, favEmail)
         if(favorites.contains(element)){
             Toast.makeText(context,"Deleted from Favorites",Toast.LENGTH_LONG).show()
             favorites.remove(element)
@@ -48,7 +45,7 @@ class PersistenceManager (private val context: Context){
 
         //if null, this means no previous scores, so create an empty array list
         if(jsonString == null) {
-            return arrayListOf<Favorites>()
+            return arrayListOf<Favorites>() as List<Favorites>
         }
         else{
             val listType = Types.newParameterizedType(List::class.java, Favorites::class.java)

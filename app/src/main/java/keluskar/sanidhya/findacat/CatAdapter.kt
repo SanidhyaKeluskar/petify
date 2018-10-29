@@ -44,6 +44,7 @@ class CustomViewHolder(val view : View, var responseDetails: ResponseTwo?=null):
             intent.putExtra("descriptionofcat",responseDetails?.petfinder?.pets?.pet!![position]?.description?.T)
             intent.putExtra("imageofcat",responseDetails?.petfinder?.pets?.pet!![position]?.media?.photos?.photo!![2]?.T)
             intent.putExtra("locationofcat",responseDetails?.petfinder?.pets?.pet!![position]?.contact?.zip?.T)
+            intent.putExtra("emailOfCat", responseDetails?.petfinder?.pets?.pet!![position]?.contact?.email?.T)
             view.context.startActivity(intent)
         }
     }

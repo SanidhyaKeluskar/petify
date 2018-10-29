@@ -33,10 +33,15 @@ class CatView : AppCompatActivity() {
 
 
 
-        catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
+
       //  catlistrecycleview.adapter=CatAdapter()
-       // doNetworkActivity(LocationDetector.postalCode)
-        doNetworkActivity("20037")
+        if(LocationDetector.postalCode==""){
+            toast("Location not avaialable. Please enter zip code")
+        }
+        else{
+            catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
+            doNetworkActivity(LocationDetector.postalCode)
+        }
     }
 
     private fun doNetworkActivity(zipCode: String) {
@@ -92,6 +97,7 @@ class CatView : AppCompatActivity() {
             mAlertDialog.dismiss()
             val zipCode=mDialogView.dialogzipcode.text.toString()
             Toast.makeText(this,zipCode,Toast.LENGTH_LONG).show()
+            catlistrecycleview.layoutManager = GridLayoutManager(this, 2)
             doNetworkActivity(zipCode)
         }
 
